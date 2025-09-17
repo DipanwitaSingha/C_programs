@@ -1,16 +1,16 @@
 #include <stdio.h>
-struct student
+union car
 {
     char name[50];
     int age;
 };
 
 // function prototype
-struct student getInformation();
+union car getInformation();
 
 int main()
 {
-    struct student s;
+    union car s;
 
     s = getInformation();
 
@@ -20,9 +20,9 @@ int main()
     
     return 0;
 }
-struct student getInformation() 
+union car getInformation() 
 {
-  struct student s1;
+ union car s1;
 
   printf("Enter name: ");
   scanf ("%[^\n]%*c", s1.name);
